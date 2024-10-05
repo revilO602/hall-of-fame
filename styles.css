@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Set relative positioning for absolute children */
+}
+
+.image-container {
+    width: 100%;
+    max-width: 1920px; /* Max width for larger screens */
+    height: auto; /* Keep aspect ratio */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    color: white; /* Ensure text is white */
+    font-size: 4vw; /* Responsive font size */
+    font-weight: bold; /* Make text bold */
+    z-index: 10; /* Ensure text is on top of the image */
+}
+
+.overlay-text svg {
+    width: 60px; /* Adjust size */
+    height: 60px; /* Adjust size */
+}
+
+.top-left {
+    top: 2%; /* Responsive distance from top */
+    left: 2%; /* Responsive distance from left */
+}
+
+.top-right {
+    top: 2%; /* Responsive distance from top */
+    right: 2%; /* Responsive distance from right */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+    .overlay-text {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+}
+
+.alumni-base {
+    font-family: "Alumni Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+.alumni-header {
+    font-family: "Alumni Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+  }
