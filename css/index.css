@@ -48,9 +48,8 @@ body, html {
 }
 
 .top-left {
-    top: 2%;
-    left: 2%;
-    font-size: 1.5vw; /* Scales text size with viewport width */
+    top: -2%;
+    left: -0.5%;
 }
 
 .top-right {
@@ -60,7 +59,7 @@ body, html {
 }
 
 .logo-image {
-    height: 9vh; /* Scales logo height with viewport height */
+    height: 16vh; /* Scales logo height with viewport height */
     width: auto;
 }
 
@@ -68,16 +67,6 @@ svg {
     width: 100%;
     height: 50%;
     cursor: pointer;
-}
-
-@media (max-width: 1200px) {
-    .top-left, .top-right {
-        font-size: 2.5vw; /* Increase text size for smaller screens */
-    }
-
-    .logo-image {
-        height: 7vh; /* Adjust logo size for smaller screens */
-    }
 }
 
 .clickable-title {
