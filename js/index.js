@@ -19,18 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     clickableSpan.addEventListener('touchend', function(event) {
-        // Allow the default action to happen after highlighting
-        setTimeout(() => {
-            window.location.href = clickableSpan.href; // Navigate to the link
-        }, 300); // Match this with the transition duration in CSS
+        window.location.href = clickableSpan.href; // Navigate to the link
+        clickableSpan.classList.remove('highlight');
     });
 
     clickableSpan.addEventListener('click', function(event) {
-        highlightSpan();
-        // Allow the default action to happen after highlighting
-        setTimeout(() => {
-            window.location.href = clickableSpan.href; // Navigate to the link
-        }, 300); // Match this with the transition duration in CSS
+        window.location.href = clickableSpan.href; // Navigate to the link
     });
 
 });
