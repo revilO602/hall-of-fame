@@ -33,8 +33,6 @@ body, html {
 
 .overlay-image {
     position: absolute;
-    top: 0;
-    left: 0;
     z-index: 2; /* Ensure it's layered on top */
 }
 
@@ -88,6 +86,6 @@ svg {
 }
 
 .locker-room {
-    top: 23%; /* Center vertically */
-    left: 9%; /* Center horizontally */ 
+    top: 29%; /* Center vertically */
+    left: 17%; /* Center horizontally */ 
 }
