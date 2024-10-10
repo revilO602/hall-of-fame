@@ -1,0 +1,114 @@
+/* locker-room.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Set relative positioning for absolute children */
+}
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+}
+
+/* Main background image (locker-room) */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.clickable-base {
+    position: absolute;
+    background: transparent; /* Ensure the background is transparent */
+    z-index: 30; /* Keep it above the image */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+/* Clickable area styles */
+.locker1 {
+    top: 37%;  /* Adjust this according to the position of the locker */
+    left: 50%; /* Adjust this according to the position of the locker */
+    width: 9%; /* Adjust the width of the clickable area */
+    height: 30%; /* Adjust the height of the clickable area */
+}
+
+.helmet {
+    top: 83%;  /* Adjust this according to the position of the locker */
+    left: 45%; /* Adjust this according to the position of the locker */
+    width: 9%; /* Adjust the width of the clickable area */
+    height: 15%; /* Adjust the height of the clickable area */
+}
+
+/* Ak chceme aby to bolo velmi prisposebene treba vela cut off pointov a upravit height a top */
+/* @media (max-width: 768px) {
+    .locker-base {
+        height: 15%;
+    }
+} */
+
+.hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 20; /* Layer it above the locker1 div */
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 40; /* Layer it above the locker1 div */
+}
+
+.card-clickable-base {
+    position: absolute;
+    background: transparent; /* Ensure the background is transparent */
+    z-index: 50; /* Keep it above the image */
+}
+
+/* Clickable area styles */
+.card-locker1-area {
+    top: 13%;  /* Adjust this according to the position of the locker */
+    left: 7%; /* Adjust this according to the position of the locker */
+    width: 85%; /* Adjust the width of the clickable area */
+    height: 74%; /* Adjust the height of the clickable area */
+    /* outline: 2px solid red; */
+    display: none;
+    user-select: none; /* Prevent text selection */
+    -webkit-tap-highlight-color: transparent; /* Remove mobile click highlight */
+}
+
+.card-helmet-area {
+    top: 22%;  /* Adjust this according to the position of the locker */
+    left: 19%; /* Adjust this according to the position of the locker */
+    width: 62%; /* Adjust the width of the clickable area */
+    height: 57%; /* Adjust the height of the clickable area */
+    /* outline: 2px solid red; */
+    display: none;
+    user-select: none; /* Prevent text selection */
+    -webkit-tap-highlight-color: transparent; /* Remove mobile click highlight */
+}
+
+/* Disable pointer events for the card area to prevent highlighting */
+/* .card-clickable-base.no-pointer-events {
+    pointer-events: none;
+} */
+

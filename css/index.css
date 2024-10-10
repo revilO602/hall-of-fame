@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+}
+
+.background-image, .overlay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2; /* Ensure it's layered on top */
+}
+
+.overlay-text {
+    position: absolute;
+    z-index: 3; /* Text and other content appear above the images */
+    color: white;
+    font-family: 'Alumni Sans', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.top-left {
+    top: 2%;
+    left: 2%;
+    font-size: 1.5vw; /* Scales text size with viewport width */
+}
+
+.top-right {
+    top: 2%;
+    right: 2%;
+    font-size: 1.5vw; /* Scales text size with viewport width */
+}
+
+.logo-image {
+    height: 9vh; /* Scales logo height with viewport height */
+    width: auto;
+}
+
+svg {
+    width: 100%;
+    height: 50%;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .top-left, .top-right {
+        font-size: 2.5vw; /* Increase text size for smaller screens */
+    }
+
+    .logo-image {
+        height: 7vh; /* Adjust logo size for smaller screens */
+    }
+}
+
+.clickable-title {
+    transform: translate(-50%, -50%); /* Adjusts position to truly center the element */
+    color: white; /* Change the text color */
+    font-family: 'Alumni Sans', sans-serif; /* Use the desired font */
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 5vw; /* Adjust the font size as needed */
+    text-align: center; /* Center align the text */
+    z-index: 10; /* Ensure it appears above other content */
+    cursor: pointer; /* Show pointer cursor on hover */
+    text-decoration: none;
+}
+
+.clickable-title.highlight {
+    text-shadow: 0 0 10px white, 0 0 20px white; /* White glowing shadow */
+}
+
+.locker-room {
+    top: 23%; /* Center vertically */
+    left: 9%; /* Center horizontally */ 
+}

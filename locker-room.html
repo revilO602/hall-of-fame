@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locker Room</title>
+    <link rel="stylesheet" href="css/locker-room.css"> <!-- Use locker-room specific styles -->
+    <script src="js/locker-room.js" defer></script> <!-- Link to the JavaScript file -->
+</head>
+<body>
+    <div class="image-container">
+            <img src="assets/locker-room.png" alt="Locker Room" class="background-image">
+            <!-- Clickable area represented by a transparent div with an outline -->
+            <div class="locker1 clickable-base"></div>
+            <div class="helmet clickable-base"></div>
+            <!-- Hover images -->
+            <div id="hover-locker1" class="hover">
+                <img src="assets/locker-room-dress.png" alt="Hover Locker 1" class="background-image" id="hoverImage">
+            </div>
+            <div id="hover-helmet" class="hover">
+                <img src="assets/locker-room-helmet.png" alt="Hover Helmet" class="background-image" id="hoverImage">
+            </div>
+            <!-- Cards -->
+            <div id="card-locker1" class="card">
+                <img src="assets/locker-room-card.png" alt="Card Locker 1" class="background-image" id="hoverImage">
+            </div>
+            <div id="card-locker1-area" class="card-locker1-area card-clickable-base"></div>
+            <div id="card-helmet" class="card">
+                <img src="assets/locker-room-helmet-card.png" alt="Card Helmet" class="background-image" id="hoverImage">
+            </div>
+            <div id="card-helmet-area" class="card-helmet-area card-clickable-base"></div>
+    </div>
+</body>
+</html>
