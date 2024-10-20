@@ -45,7 +45,7 @@ body, html {
     font-family: 'Alumni Sans', sans-serif;
     display: flex;
     flex-direction: column;
-    row-gap: 10vh;
+    row-gap: 7vh;
 }
 
 .top-left {
@@ -90,14 +90,14 @@ svg {
 .left-column {
     max-width: 17vw;
     align-items: start;
-    top: 15%; /* Center vertically */
-    left: 5%; /* Center horizontally */ 
+    top: 17%; /* Center vertically */
+    left: 4%; /* Center horizontally */ 
 }
 .right-column {
     max-width: 17vw;
     align-items: end;
-    top: 15%; /* Center vertically */
-    right: 5%; /* Center horizontally */ 
+    top: 17%; /* Center vertically */
+    right: 4%; /* Center horizontally */ 
 }
 
 .left-column a, .right-column a {
