@@ -12,9 +12,17 @@
             <a href="index.html" id="back" class="back">
                 <img src="assets/back.svg" alt="back" class="background-image" id="back">
             </a>
-            <img src="assets/locker-room.png" alt="Locker Room" class="background-image">
+            <img id="locker-room" src="assets/locker-room.png" alt="Locker Room" class="background-image">
             <!-- Clickable area represented by a transparent div with an outline -->
             <div class="locker1 clickable-base"></div>
+            <video id="animation-right" class="video video-hidden" width="1920" height="1080" preload="auto" muted>
+                <source src="assets/locker-swap-left.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video id="animation-left" class="video video-hidden" width="1920" height="1080" preload="auto" muted>
+                <source src="assets/locker-swap-right.mp4" type="video/mp4" >
+                Your browser does not support the video tag.
+            </video>
             <div class="helmet clickable-base"></div>
             <!-- Hover images -->
             <div id="hover-locker1" class="hover">

@@ -126,3 +126,55 @@ document.addEventListener("DOMContentLoaded", function() {
         event.stopPropagation();
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const videoForward = document.getElementById('animation-right');  // Forward video
+    const videoReverse = document.getElementById('animation-left');   // Reverse video
+    const swipeElement = document.querySelector('#locker-room');      // Element to detect swipe on
+
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    // Detect swipe gestures
+    function handleGesture() {
+        if (touchendX < touchstartX - 50) { // Swipe left threshold
+            showAndPlayVideo(videoForward);
+        } else if (touchendX > touchstartX + 50) { // Swipe right threshold
+            showAndPlayVideo(videoReverse);
+        }
+    }
+
+    // Show and play the appropriate video (forward or reverse)
+    function showAndPlayVideo(video) {
+        hideAllVideos();  // Hide any currently playing video
+
+        video.classList.remove('video-hidden');
+        video.classList.add('video-visible');
+        video.play();
+
+        // Hide the video when it ends
+        video.onended = function() {
+            video.classList.remove('video-visible');
+            video.classList.add('video-hidden');
+        };
+    }
+
+    // Hide both videos
+    function hideAllVideos() {
+        videoForward.classList.remove('video-visible');
+        videoForward.classList.add('video-hidden');
+        videoReverse.classList.remove('video-visible');
+        videoReverse.classList.add('video-hidden');
+    }
+
+    // Add touch event listeners to detect swipe only on the specific element
+    swipeElement.addEventListener('touchstart', function(event) {
+        touchstartX = event.changedTouches[0].screenX;
+    });
+
+    swipeElement.addEventListener('touchend', function(event) {
+        touchendX = event.changedTouches[0].screenX;
+        handleGesture();
+    });
+});
+
