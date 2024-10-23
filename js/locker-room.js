@@ -2,8 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const locker1 = document.querySelector('.locker1');
     const hoverDiv = document.getElementById('hover-locker1');
-    const cardLocker1 = document.getElementById('card-locker1');
-    const cardLocker1Area = document.getElementById('card-locker1-area');
+    const cardLocker1 = document.getElementById('cards-locker1');
     const helmet = document.querySelector('.helmet');
     const helmetHoverDiv = document.getElementById('hover-helmet');
     const cardHelmet = document.getElementById('card-helmet');
@@ -26,24 +25,17 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-    // Add click event listener to each 'clickable-base' element
-    // clickableElements.forEach(function(clickable) {
-    //     clickable.addEventListener('click', function() {
-    //         darkenAllElements(); // Darken all elements with 'darken' class when clicked
-    //     });
-    // });
-
     function showHover() {
         hoverDiv.style.display = 'block';
     }
     function showCard() {
-        cardLocker1.style.display = 'block';
-        cardLocker1Area.style.display = 'block';
+        darkenAllElements();
+        cardLocker1.style.display = 'flex';
     }
 
     function hideCard() {
+        lightAllElements();
         cardLocker1.style.display = 'none';
-        cardLocker1Area.style.display = 'none';
     }
 
     function hideHover() {
@@ -77,18 +69,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Close the card when clicking outside the card area
-    cardLocker1.addEventListener('click', function (event) {
-        if (cardLocker1.style.display === 'block') {
-            if (!cardLocker1Area.contains(event.target)) {
+    document.addEventListener('click', function (event) {
+        if (cardLocker1.style.display === 'flex') {
+            if (!cardLocker1.contains(event.target)) {
                 hideCard();
             }
         }
-    });
-
-    // Prevent the card from closing when the card area is clicked
-    cardLocker1Area.addEventListener('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
     });
 
     function showHoverHelmet() {
@@ -100,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function showCardHelmet() {
+        if (!helmet.classList.contains("darkened"))
         cardHelmet.style.display = 'block';
     }
 

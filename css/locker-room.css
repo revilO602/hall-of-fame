@@ -47,8 +47,14 @@ body, html {
 .card {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     display: none;
+}
+
+.player-card {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .card-clickable-base {
@@ -100,6 +106,51 @@ body, html {
 
 .pulse-svg {
     animation: pulseShadow 1.5s infinite ease-in-out;
+}
+
+.card-bg {
+    background-image: url('../assets/card-bg.png'); /* Set the background image */
+    background-size: cover; /* Ensure the background covers the entire card */
+    background-position: center; /* Center the background image */
+}
+
+.scrollable-container {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    padding: 4% 2% 5% 5%; /* Optional padding inside the container */
+    box-sizing: border-box; /* Ensure padding is included in the size */
+    position: absolute;
+    z-index: 41;
+}
+
+.scrollable-content {
+    overflow-y: scroll; /* Enable vertical scrolling */
+    max-height: 100%; /* Make sure content takes up full height but can scroll */
+    line-height: 1.5; /* Adjust the line height for readability */
+    padding: 0% 3% 0% 0%;
+}
+
+.card-text {
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: black; /* Text color */
+    font-size: 2vw;
+}
+
+.text-red {
+    color: #CE0526; /* Text color */
+    font-weight: 700;
+}
+
+.card-title {
+    font-family: "Afacad", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3vw;
+    text-transform: uppercase;
 }
 
 /* POSITIONS */
@@ -157,11 +208,16 @@ body, html {
 }
 
 .helmet-card {
-    
     width: 50%;
     height: auto;
     z-index: 40;
+}
 
+.locker1-cards {
+    width: 70%;
+    height: auto;
+    z-index: 40;
+    column-gap: 5%;
 }
 
 /* Z INDEXES */
@@ -171,4 +227,17 @@ body, html {
 
 .darkened {
     filter: brightness(35%);
+}
+
+#scrollbar3::-webkit-scrollbar {
+    width: 12px;
+}
+
+#scrollbar3::-webkit-scrollbar-track {
+    background-color: #AAB3D4;
+    border: 1px solid #cacaca;
+}
+
+#scrollbar3::-webkit-scrollbar-thumb {
+    background-color: #01226D;
 }

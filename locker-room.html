@@ -6,6 +6,10 @@
     <title>Locker Room</title>
     <link rel="stylesheet" href="css/locker-room.css"> <!-- Use locker-room specific styles -->
     <script src="js/locker-room.js" defer></script> <!-- Link to the JavaScript file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad:wght@700&family=Alumni+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad&family=Alumni+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="image-container">
@@ -41,14 +45,37 @@
                 <img src="assets/bublina-helmet.png" alt="Hover Helmet" class="page-image" id="hoverImage">
             </div>
             <!-- Cards -->
-            <div id="card-locker1" class="card">
-                <img src="assets/locker-room-card.png" alt="Card Locker 1" class="page-image" id="hoverImage">
+            <div id="cards-locker1" class="locker1-cards card">
+                <div class="player-card">
+                    <img src="assets/card1.png" alt="Card Locker 1" class="page-image">
+                </div>
+                <div class="player-card page-image card-bg">
+                    <div class="scrollable-container" id="scrollbar3">
+                        <div class="scrollable-content" id="scrollbar3">
+                            <p class="card-title text-red">Oto Haščák</p>
+                            <br>
+                            <p class="card-text">„Oťas” je bývalý slovenský hokejový útočník. Skaut hokejových talentov pre NHL, naposledy v New York Rangers.</p>
+                            <br>
+                            <p class="card-text text-red">NARODENÝ:</p>
+                            <p class="card-text">31. januára 1964 v Martine</p>
+                            <br>
+                            <p class="card-text">Na ligovej úrovni začal v rodnom Martine, no hokejovo najviac vyrástol a dozrel počas vojenčiny od roku 1984 v Dukle Trenčín. V jej drese získal 2x striebornú medailu v ére ČSSR, po rozdelení 2x striebro a lx bronz. Hoci ho v roku 1989 draftovali do NHL, výlučne pôsobil v Európe - vo švédskej Elitserien i prvej divízii, nemeckej DEL, českej extralige a fínskej SM-liige. Ligový titul vybojoval s tímom HC Vsetín v sezóne 1996/97. Odohral 577 ligových zápasov, v ktorých strelil 219 gólov. Kariéru ukončil v roku 2001 v Dukle Trenčín.</p>
+                            <p class="card-text">Za Česko-Slovensko sa zúčastnil dvoch svetových šampionátov (1989 a 1990), na oboch získal bronz. Za čs. reprezentáciu odohral 62 zápasov a strelil 1 1 gólov.</p>
+                            <br>
+                            <p class="card-text text-red">NAJVÄČŠÍ ÚSPECH:</p>
+                            <p class="card-text">V slovenskej reprezentácii spolu odohral 60 zápasov, strelil 17 gólov. Výrazne sa zaslúžil o zlato a postup samostatnej hokejovej reprezentácie Slovenska z C-kategórie v roku 1994 a o zlato i postup z B-kategórie MS medzi svetovú elitu v roku 1995. Pricestoval do Bratislavy na posledný zápas proti Bielorusku, ktorému strelil oba víťazné góly (2:1 ). Vďaka tesnému víťazstvu postúpilo Slovensko do A-kategórie MS II H F.
+                                Po skončení aktívnej hráčskej kariéry zostal pri hokeji. Najskôr sa stal hrajúcim trénerom Dukly Trenčín, následne viceprezidentom klubu, funkcionársky pôsobí aj v SZĽH.
+                            </p>
+                            <br>
+                            <p class="card-text">Do Siene slávy slovenského hokeja ho uviedli v roku 2019.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="card-locker1-area" class="card-locker1-area card-clickable-base"></div>
             <div id="card-helmet" class="card helmet-card">
                 <img src="assets/helmet-card.png" alt="Card Helmet" class="page-image" id="hoverImage">
             </div>
-            <div id="card-helmet-area" class="card-helmet-area card-clickable-base"></div>
     </div>
 </body>
 </html>
