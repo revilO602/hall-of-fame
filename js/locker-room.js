@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const hoverDiv = document.getElementById('hover-locker1');
     const cardLocker1 = document.getElementById('cards-locker1');
     const helmet = document.querySelector('.helmet');
+    const room = document.querySelector('.locker-room');
     const helmetHoverDiv = document.getElementById('hover-helmet');
     const cardHelmet = document.getElementById('card-helmet');
 
@@ -63,13 +64,13 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     locker1.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default touch behavior
+        event.preventDefault();
         hideHover();
         showCard();
     });
 
     // Close the card when clicking outside the card area
-    document.addEventListener('click', function (event) {
+    room.addEventListener('click', function (event) {
         if (cardLocker1.style.display === 'flex') {
             if (!cardLocker1.contains(event.target)) {
                 hideCard();
@@ -122,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Close the card when clicking outside the card area
-    document.addEventListener('click', function (event) {
+    room.addEventListener('click', function (event) {
         if (cardHelmet.style.display === 'block') {
             if (!cardHelmet.contains(event.target)) {
                 hideCardHelmet();
