@@ -26,7 +26,7 @@ body, html {
 }
 
 /* Main background image (locker-room) */
-.background-image {
+.page-image {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -36,39 +36,12 @@ body, html {
 .clickable-base {
     position: absolute;
     background: transparent; /* Ensure the background is transparent */
-    z-index: 20; /* Keep it above the image */
     cursor: pointer; /* Change cursor to indicate it's clickable */
 }
 
-/* Clickable area styles */
-.locker1 {
-    top: 37%;  /* Adjust this according to the position of the locker */
-    left: 50%; /* Adjust this according to the position of the locker */
-    width: 9%; /* Adjust the width of the clickable area */
-    height: 30%; /* Adjust the height of the clickable area */
-}
-
-.helmet {
-    top: 83%;  /* Adjust this according to the position of the locker */
-    left: 45%; /* Adjust this according to the position of the locker */
-    width: 9%; /* Adjust the width of the clickable area */
-    height: 15%; /* Adjust the height of the clickable area */
-    z-index: 40;
-}
-
-/* Ak chceme aby to bolo velmi prisposebene treba vela cut off pointov a upravit height a top */
-/* @media (max-width: 768px) {
-    .locker-base {
-        height: 15%;
-    }
-} */
-
 .hover {
     position: absolute;
-    width: 100%;
-    height: 100%;
     display: none;
-    z-index: 21; /* Layer it above the locker1 div */
 }
 
 .card {
@@ -76,7 +49,6 @@ body, html {
     width: 100%;
     height: 100%;
     display: none;
-    z-index: 40; /* Layer it above the locker1 div */
 }
 
 .card-clickable-base {
@@ -97,33 +69,12 @@ body, html {
     -webkit-tap-highlight-color: transparent; /* Remove mobile click highlight */
 }
 
-.card-helmet-area {
-    top: 22%;  /* Adjust this according to the position of the locker */
-    left: 19%; /* Adjust this according to the position of the locker */
-    width: 62%; /* Adjust the width of the clickable area */
-    height: 57%; /* Adjust the height of the clickable area */
-    /* outline: 2px solid red; */
-    display: none;
-    user-select: none; /* Prevent text selection */
-    -webkit-tap-highlight-color: transparent; /* Remove mobile click highlight */
-}
-
-/* Disable pointer events for the card area to prevent highlighting */
-/* .card-clickable-base.no-pointer-events {
-    pointer-events: none;
-} */
-
-.back {
+.button {
     position: absolute;
-    z-index: 21; /* Text and other content appear above the images */
     color: white;
-    top: 4%;  /* Adjust this according to the position of the locker */
-    left: 93%; /* Adjust this according to the position of the locker */
-    width: 3.5%; /* Adjust the width of the clickable area */
     height: auto; /* Adjust the height of the clickable area */
     user-select: none; /* Prevent text selection */
     -webkit-tap-highlight-color: transparent; /* Remove mobile click highlight */
-    z-index: 31;
 }
 
 .video {
@@ -132,12 +83,92 @@ body, html {
     left: 50%; /* Center it horizontally */
     transform: translate(-50%, -50%); /* Proper centering */
     z-index: 30; /* Make sure it's on top of everything */
+    display: none;
 }
 
-.video-hidden {
-    display: none; /* Hidden by default */
+@keyframes pulseShadow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 1));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    }
 }
 
-.video-visible {
-    display: block; /* Show the video when it's visible */
+.pulse-svg {
+    animation: pulseShadow 1.5s infinite ease-in-out;
+}
+
+/* POSITIONS */
+.back {
+    top: 4%;  /* Adjust this according to the position of the locker */
+    left: 93%; /* Adjust this according to the position of the locker */
+    width: 3.5%; /* Adjust the width of the clickable area */
+    height: auto; /* Adjust the height of the clickable area */
+    z-index: 31;
+}
+.left {
+    top: 60%;  /* Adjust this according to the position of the locker */
+    left: 0%; /* Adjust this according to the position of the locker */
+    width: 8%; /* Adjust the width of the clickable area */
+    height: auto; /* Adjust the height of the clickable area */
+    z-index: 31;
+}
+
+.right {
+    top: 60%;  /* Adjust this according to the position of the locker */
+    right: 0%; /* Adjust this according to the position of the locker */
+    width: 8%; /* Adjust the width of the clickable area */
+    height: auto; /* Adjust the height of the clickable area */
+    z-index: 31;
+}
+
+.locker1 {
+    top: 37%;  /* Adjust this according to the position of the locker */
+    left: 50%; /* Adjust this according to the position of the locker */
+    width: 9%; /* Adjust the width of the clickable area */
+    height: 30%; /* Adjust the height of the clickable area */
+    z-index: 20;
+}
+
+.helmet {
+    top: 83%;  /* Adjust this according to the position of the locker */
+    left: 45%; /* Adjust this according to the position of the locker */
+    width: 9%; /* Adjust the width of the clickable area */
+    height: 15%; /* Adjust the height of the clickable area */
+    z-index: 31;
+}
+
+.hover-locker1 {
+    top: 24%;  /* Adjust this according to the position of the locker */
+    left: 57%; /* Adjust this according to the position of the locker */
+    width: 17%;
+    z-index: 21;
+}
+
+.hover-helmet {
+    top: 67%;  /* Adjust this according to the position of the locker */
+    left: 52%; /* Adjust this according to the position of the locker */
+    width: 17%;
+    z-index: 21;
+}
+
+.helmet-card {
+    
+    width: 50%;
+    height: auto;
+    z-index: 40;
+
+}
+
+/* Z INDEXES */
+.locker-room {
+    z-index: 0;
+}
+
+.darkened {
+    filter: brightness(35%);
 }
