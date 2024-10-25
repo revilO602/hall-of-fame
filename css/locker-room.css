@@ -126,7 +126,6 @@ body, html {
 .scrollable-content {
     overflow-y: scroll; /* Enable vertical scrolling */
     max-height: 100%; /* Make sure content takes up full height but can scroll */
-    line-height: 1.5; /* Adjust the line height for readability */
     padding: 0% 3% 0% 0%;
 }
 
@@ -136,7 +135,7 @@ body, html {
     font-weight: 400;
     font-style: normal;
     color: black; /* Text color */
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .text-red {
@@ -149,7 +148,7 @@ body, html {
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-transform: uppercase;
 }
 
@@ -230,7 +229,7 @@ body, html {
 }
 
 #scrollbar3::-webkit-scrollbar {
-    width: 12px;
+    width: 24px;
 }
 
 #scrollbar3::-webkit-scrollbar-track {

@@ -1,11 +1,9 @@
 // locker-room.js
 document.addEventListener("DOMContentLoaded", function() {
     const locker1 = document.querySelector('.locker1');
-    const hoverDiv = document.getElementById('hover-locker1');
     const cardLocker1 = document.getElementById('cards-locker1');
     const helmet = document.querySelector('.helmet');
     const room = document.querySelector('.locker-room');
-    const helmetHoverDiv = document.getElementById('hover-helmet');
     const cardHelmet = document.getElementById('card-helmet');
 
     // Select all elements with the 'darken' class
@@ -26,9 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
-    function showHover() {
-        hoverDiv.style.display = 'block';
-    }
     function showCard() {
         darkenAllElements();
         cardLocker1.style.display = 'flex';
@@ -39,33 +34,13 @@ document.addEventListener("DOMContentLoaded", function() {
         cardLocker1.style.display = 'none';
     }
 
-    function hideHover() {
-        hoverDiv.style.display = 'none';
-    }
-
-    // Handle hover for desktop (mouse)
-    locker1.addEventListener('mouseover', function() {
-        showHover();
-    });
-
-    locker1.addEventListener('mouseout', function() {
-        hideHover();
-    });
-
     locker1.addEventListener('touchstart', function(event) {
         event.preventDefault(); // Prevent default touch behavior
-        showHover();
-    });
-
-    locker1.addEventListener('touchend', function(event) {
-        event.preventDefault(); // Prevent default touch behavior
-        hideHover();
         showCard();
     });
 
     locker1.addEventListener('click', function(event) {
         event.preventDefault();
-        hideHover();
         showCard();
     });
 
@@ -78,14 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    function showHoverHelmet() {
-        if (!helmet.classList.contains("darkened"))
-        helmetHoverDiv.style.display = 'block';
-    }
-    function hideHoverHelmet() {
-        helmetHoverDiv.style.display = 'none';
-    }
-
     function showCardHelmet() {
         if (!helmet.classList.contains("darkened"))
         cardHelmet.style.display = 'block';
@@ -94,23 +61,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function hideCardHelmet() {
         cardHelmet.style.display = 'none';
     }
-    // Handle hover for desktop (mouse)
-    helmet.addEventListener('mouseover', function() {
-        showHoverHelmet();
-    });
-
-    helmet.addEventListener('mouseout', function() {
-        hideHoverHelmet();
-    });
 
     helmet.addEventListener('touchstart', function(event) {
         event.preventDefault(); // Prevent default touch behavior
-        showHoverHelmet();
-    });
-
-    helmet.addEventListener('touchend', function(event) {
-        event.preventDefault(); // Prevent default touch behavior
-        hideHoverHelmet();
         showCardHelmet();
         darkenAllElements();
     });
