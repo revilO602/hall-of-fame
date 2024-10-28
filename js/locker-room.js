@@ -102,8 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let touchendX = 0;
 
     // Detect swipe gestures
-    function handleGesture(event) {
-        event.preventDefault();
+    function handleGesture() {
         if (touchendX < touchstartX - 50) { // Swipe left threshold
             showAndPlayVideo(videoForward);
         } else if (touchendX > touchstartX + 50) { // Swipe right threshold
@@ -136,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     swipeElement.addEventListener('touchend', function(event) {
         touchendX = event.changedTouches[0].screenX;
-        handleGesture(event);
+        handleGesture();
     });
 
     swipeElement.addEventListener('touchmove', function(event) {
